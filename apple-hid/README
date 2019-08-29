@@ -1,0 +1,6 @@
+This is a modified version of the hid-apple.c Linux driver adding brightness support.
+
+The hid-apple.c.patch file can be applied over the 9cf6b756cdf2cd38b8b0dac2567f7c6daf5e79d5 commit of the Linux
+source tree (probably should apply on other versions of the kernel as well).
+
+The driver can also be built out of source using the provided source files and has been tested on Linux 5.1.16.
