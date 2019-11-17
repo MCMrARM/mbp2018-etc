@@ -1,0 +1,13 @@
+This is a heavily modified version of the applesmc.c Linux driver adding T2 support. The driver was basically rewritten.
+
+The applesmc device can now be found at: /sys/bus/acpi/devices/APP0001:00
+
+The patches/ patch set can be applied over the ec5385196779fb927e7d8d5bf31bef14d7ce98ed commit of the Linux kernel and
+to be honest, probably on anything else as that driver wasn't modified since a while.
+
+For the T2, the driver can also be built out of source using the provided applesmc_t2_kmod.c file and has been tested
+on Linux 5.1.16. Please note that the applesmc_t2_kmod.c source file was modified to disable accelerometer as it used
+non-exported Linux APIs, and as such probably should not be used on devices that do have accelerometers.
+
+The applesmc.c file is the patched version of the applesmc.c driver, however it won't compile out of tree. It's provided
+as a convenience and a way to quickly review the modifications as a whole.
